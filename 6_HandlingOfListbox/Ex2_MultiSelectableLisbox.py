@@ -2,7 +2,7 @@ import time
 import pytest
 from playwright.sync_api import Page,expect
 
-def test_verify_css_locator(page:Page):
+def test_selectMultiSelectableListbox(page:Page):
    page.goto("https://testautomationpractice.blogspot.com")
    page.wait_for_timeout(2000)
 

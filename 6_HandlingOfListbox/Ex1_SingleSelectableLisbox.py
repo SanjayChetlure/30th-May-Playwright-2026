@@ -2,14 +2,14 @@ import time
 import pytest
 from playwright.sync_api import Page,expect
 
-def test_verify_css_locator(page:Page):
+def test_selectSingleSelectableListbox(page:Page):
    page.goto("https://testautomationpractice.blogspot.com")
    page.wait_for_timeout(2000)
 
    country=page.locator("#country")
 
    #3 ways to select option (Text/label, value, index)
-   #1.1 Select option -> #Text or label
+   #1.1 Select option -> #Text
    country.select_option("Japan")
    # country.select_option(label="Canada")
    page.wait_for_timeout(8000)
